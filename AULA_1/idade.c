@@ -1,32 +1,27 @@
 /*
-Contagem regressiva 
+Contador de dias baseado em uma idade.
 
 Mateus F. 09-02-2022
 */
-#ifdef _WIN32
-#include <Windows.h>
-#else
-#include <unistd.h>
-#endif
+
 #include <stdio.h>
 
 int main()
 {
-    //Pegar input do usuário
-    int num = 0;
-    printf("Digite o número para eu contar em segundos: ");
-    scanf("%d", &num);
-    //Ter certeza que o número é positivo
-    if (num < 0) {
-        printf("O número tem que ser positivo");
-        return 0;
+    //Pegar o input do usuário
+    int idade = 0;
+    printf("Digite sua idade em anos: ");
+    scanf("%d", &idade);
+    //Ter certeza que a idade seja maior que positiva
+    while (idade < 0) {
+        printf("Sua idade tem que ser positiva: ");
+        scanf("%d", &idade);
     }
-    //Contar em segundos
-    while (num >= 0)
-    {
-        printf("\n%d...", num);
-        num--;
-        sleep(1);
-    }
+    //Converter para dias
+    int dias = idade * 365;
+    //Mostrar o output
+    printf("Você tem %d de vida em dias!", dias);
+
     return 0;
 }
+
