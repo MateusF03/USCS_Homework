@@ -20,7 +20,7 @@ int main ()
     }
     // Processamento
     int dup = getDuplicates(lados, tamanho);
-    printf("%d", dup);
+    //printf("%d", dup);
     if (dup == 0) {
         tipo = "escaleno";
     } else if (dup == 1) {
