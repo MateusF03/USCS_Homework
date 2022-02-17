@@ -1,7 +1,6 @@
 /*
 OBJETIVO:
 Ler medidas de um triangulo e classificar ele
-
 Mateus F. 16-02-2022
 */
 #include <stdio.h>
@@ -21,11 +20,12 @@ int main ()
     }
     // Processamento
     int dup = getDuplicates(lados, tamanho);
+    printf("%d", dup);
     if (dup == 0) {
         tipo = "escaleno";
-    } else if (dup = 1) {
+    } else if (dup == 1) {
         tipo = "isósceles";
-    } else if (dup = 2) {
+    } else if (dup == 2) {
         tipo = "equilátero";
     }
     //Saída
@@ -38,9 +38,9 @@ int getDuplicates(int array[], int len) {
     int count = 0;
     int lastCount = 0;
     for (int i = 0; i < len; i++) {
-        if (i + 1 == len) {
+        /*if (i + 1 == len) {
             break;
-        }
+        }*/
         lastCount = array[i];
         if (lastCount == array[i + 1]) {
             count++;
