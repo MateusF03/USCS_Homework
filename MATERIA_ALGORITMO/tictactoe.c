@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define ARRLEN(x) sizeof(x)/sizeof(x[0])
 #define MAXSLOTS 9
 
 typedef struct {
