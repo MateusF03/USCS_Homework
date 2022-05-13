@@ -70,7 +70,11 @@ int main()
         table->currentPlayer = !table->currentPlayer;
     }
     
-    
+    for (int i = 0; i < MAXSLOTS; i++) {
+        free(table->marks[i]);
+    }
+    //free(table->marks); 
+    free(table);
     return 0;
 }
 
