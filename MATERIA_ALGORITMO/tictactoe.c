@@ -30,9 +30,9 @@ int win = 0;
 bool tie = false;
     
 Mark *salloc(void);
-void printTable();
-bool checkWin();
-int getValidInput(GameTable *table);
+void printTable(GameTable *table);
+bool checkWin(GameTable *table);
+int getValidInput(GameTable *table)
 
 char* messages[3] = {
     "Empate!", "Jogador 1 venceu!", "Jogador 2 venceu!"
