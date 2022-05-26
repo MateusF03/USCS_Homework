@@ -32,9 +32,9 @@ bool tie = false;
 Mark *salloc(void);
 void printTable(GameTable *table);
 bool checkWin(GameTable *table);
-int getValidInput(GameTable *table)
+int getValidInput(GameTable *table);
 
-char* messages[3] = {
+char* messages[] = {
     "Empate!", "Jogador 1 venceu!", "Jogador 2 venceu!"
 };
 
@@ -47,7 +47,6 @@ int main()
     */
     GameTable *table;
     table = (GameTable *) malloc(sizeof(GameTable));
-    
     for (int i = 0; i < MAXSLOTS; i++) {
         table->marks[i] = salloc();
         table->marks[i]->player = -1;
